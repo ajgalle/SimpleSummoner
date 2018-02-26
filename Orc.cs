@@ -8,11 +8,5 @@ namespace SimpleSummoner
 {
     class Orc
     {
-
-        public Orc()
-        {
-            Console.WriteLine("Hi,I'm " +  " and I'm an Orc.");
-
-        }
     }
 }

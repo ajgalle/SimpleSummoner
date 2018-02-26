@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace SimpleSummoner
 {
-    class Zoo
+    class Library
     {
-        
+        public void ShowLibrary()
+        {
+            Console.WriteLine("Your library contains the following cards:");
+
+        }
+
+
     }
+
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimpleSummoner
 {
-    class Rat
+    class Dragon
     {
     }
 }

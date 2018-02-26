@@ -10,19 +10,48 @@ namespace SimpleSummoner
     {
         static void Main(string[] args)
         {
-            var PetName = "";
-            Monster[] Zoo = { };
+            string userEntry="";
+            const int GoldToStartTheGameWith = 1000;
 
-            while (PetName.ToLower() != "quit")
-            { 
-                Console.WriteLine("Hello, summoner.  What do you want to name your pet? Or, just type 'quit' to quit");
+            Shop shop = new Shop(GoldToStartTheGameWith);
+            Library library = new Library();
 
-                PetName = Console.ReadLine();               
 
-                Monster pet = new Monster(PetName);
+            while (userEntry.ToLower() != "b")
+            {
 
-                Console.WriteLine("I will add him to your deck.");
-                
+                Console.WriteLine("Hello, summoner. What would you like to do today? ");
+                Console.WriteLine("A. Buy some packs to get more creature cards.");
+                Console.WriteLine("B. View my collection and may deck.");
+                Console.WriteLine("C. Quit");
+
+
+                try
+                {
+                    userEntry = Console.ReadLine();
+
+                    if (userEntry.ToLower() == "a")
+                    {
+                        shop.BuyPacks();
+                    }
+
+                    else if (userEntry.ToLower() == "b")
+                    {
+                        library.ShowLibrary();
+                    } 
+                 
+
+                }
+                catch (Exception ex)
+                {
+                    
+                    Console.WriteLine("I'm sorry, I didn't understand you.  Please try again.");
+                    Console.WriteLine("The system said you did this: " + ex);
+
+                }
+            
+
+
                 
                 
 
